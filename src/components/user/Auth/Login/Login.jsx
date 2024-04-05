@@ -5,7 +5,7 @@ import view from "../../../../assets/icons/View.svg";
 import eye from "../../../../assets/icons/eyepass.svg";
 import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import AuthDesign from "../AuthDesign/AuthDesign";
 import Typography from "../../../utilities/Typography";
@@ -20,6 +20,8 @@ const loginSchema = Yup.object().shape({
     .required("Password is required"),
 });
 export default function Login() {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -31,6 +33,13 @@ export default function Login() {
     validateOnMount: false,
     onSubmit: (values) => {
       formik.handleReset();
+      
+      {values.email==="admin_email@gmail.com" && values.password==="12345678" ? navigate('/dashboard' ): ""}
+      {values.email==="service_provider_email@gmail.com" && values.password==="12345678" ? navigate('/dashboard_service_provider' ): ""}
+
+      console.log(values)
+
+
     },
   });
   const { t } = useTranslation("global");

@@ -69,7 +69,6 @@ function App() {
           <Route path="/register-provider" element={<RegisterProvider />} />
 
           <Route path="/confirm-email" element={<ConfirmEmail />} />
-
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/verification-code" element={<VerfictionCode />} />
           <Route path="/reset-password" element={<ResettPassword />} />
