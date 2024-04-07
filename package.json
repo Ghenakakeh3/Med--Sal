@@ -3,7 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
+  
+  "homepage":"https://Ghenakakeh3.github.io/Med--Sal/",
   "scripts": {
+    
+  "predeploy":"npm run build",
+  "deploy":"gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -19,6 +25,7 @@
     "date-fns": "^3.0.5",
     "formik": "^2.4.5",
     "framer-motion": "^10.16.4",
+    "gh-pages": "^6.1.1",
     "i18next": "^23.6.0",
     "leaflet": "^1.9.4",
     "localforage": "^1.10.0",
