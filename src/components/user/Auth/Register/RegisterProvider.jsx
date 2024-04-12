@@ -97,7 +97,7 @@ const RegisterProvider = () => {
   const navigate = useNavigate();
   const changeUserType = () => {
     setUserType("patient");
-    navigate("/register");
+    navigate("/Med--Sal/register");
   };
 
   const handleServiceType = (event) => {
@@ -130,7 +130,7 @@ const RegisterProvider = () => {
           <Typography component="h4">
             {t("register.loginQuest")}
             <Link
-              to="/login"
+              to="/Med--Sal/login"
               className="ms-1 text-success hover:text-secondary border-b-solid border-b-success hover:border-secondary border-b-[1px] cursor-pointer "
             >
               {t("register.loginLink")}

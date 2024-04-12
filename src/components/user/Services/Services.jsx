@@ -179,7 +179,7 @@ export default function Service() {
           <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 gap-7  lg:ps-14">
             {providers.services.map((provider, index) => (
               <div className="w-full" key={index}>
-                <Link to={`/details/${provider.id}`}>
+                <Link to={`/Med--Sal/services/details/${provider.id}`}>
                   <div className="relative  before:absolute before:content-[''] before:w-full before:h-full before:bg-black before:bg-opacity-30 before:rounded-xl">
                     <img className="w-full" src={provider.image} alt="img" />
                     <div className="absolute bottom-0 px-4 py-2">

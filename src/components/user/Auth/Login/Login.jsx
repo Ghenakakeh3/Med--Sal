@@ -34,8 +34,8 @@ export default function Login() {
     onSubmit: (values) => {
       formik.handleReset();
       
-      {values.email==="admin_email@gmail.com" && values.password==="12345678" ? navigate('/dashboard' ): ""}
-      {values.email==="service_provider_email@gmail.com" && values.password==="12345678" ? navigate('/dashboard_service_provider' ): ""}
+      {values.email==="admin_email@gmail.com" && values.password==="12345678" ? navigate('/Med--Sal/dashboard' ): ""}
+      {values.email==="service_provider_email@gmail.com" && values.password==="12345678" ? navigate('/Med--Sal/dashboard_service_provider' ): ""}
 
       console.log(values)
 
@@ -66,7 +66,7 @@ export default function Login() {
               {t("login.p")}
               <Link
                 className="text-success text-xs md:text-base border-b-[1px] border-success hover:text-secondary hover:border-secondary"
-                to={"/register"}
+                to={"/Med--Sal/register"}
               >
                 {t("login.create")}
               </Link>
@@ -109,7 +109,7 @@ export default function Login() {
               <div className="text-end mb-[-5px]">
                 <Link
                   className="text-sm texe-mySlate hover:text-secondary transition hover:animate-bounce"
-                  to={"/forget-password"}
+                  to={"/Med--Sal/forget-password"}
                 >
                   {t("login.forget")}
                 </Link>

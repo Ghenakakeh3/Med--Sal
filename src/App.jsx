@@ -64,28 +64,28 @@ function App() {
     <div className="font-alegreya">
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<RegisterPatient />} />
-          <Route path="/register-provider" element={<RegisterProvider />} />
+          <Route path="/Med--Sal/login" element={<Login />} />
+          <Route path="/Med--Sal/register" element={<RegisterPatient />} />
+          <Route path="/Med--Sal/register-provider" element={<RegisterProvider />} />
 
-          <Route path="/confirm-email" element={<ConfirmEmail />} />
-          <Route path="/forget-password" element={<ForgetPassword />} />
-          <Route path="/verification-code" element={<VerfictionCode />} />
-          <Route path="/reset-password" element={<ResettPassword />} />
-          <Route path="/" element={<UserLayout />}>
-            <Route path="/" element={<Landing />} />
-            <Route path="services" element={<TitleAndSideServices />}>
+          <Route path="/Med--Sal/confirm-email" element={<ConfirmEmail />} />
+          <Route path="/Med--Sal/forget-password" element={<ForgetPassword />} />
+          <Route path="/Med--Sal/verification-code" element={<VerfictionCode />} />
+          <Route path="/Med--Sal/reset-password" element={<ResettPassword />} />
+          <Route path="/Med--Sal" element={<UserLayout />}>
+            <Route path="/Med--Sal"   element={<Landing />} />
+            <Route path="/Med--Sal/services" element={<TitleAndSideServices />}>
               <Route index element={<Service />} />
               <Route path="map" element={<ChoselocationMap />} />
               <Route path="search" element={<Search />} />
             </Route>
-            <Route path="/details/:id" element={<Details />} />
+            <Route path="/Med--Sal/services/details/:id" element={<Details />} />
 
             <Route path="about-us" element={<AboutUs />} />
             <Route path="contact-us" element={<ContactUs />} />
           </Route>
-          <Route path="/dashboard" element={<DashboardLayout />}>
-            <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/Med--Sal/dashboard" element={<DashboardLayout />}>
+            <Route path="/Med--Sal/dashboard" element={<Dashboard />} />
 
             <Route path="users" element={<Dashboard />} />
             <Route
@@ -126,7 +126,7 @@ function App() {
           </Route>
 
           <Route
-            path="/dashboard_service_provider"
+            path="/Med--Sal/dashboard_service_provider"
             element={<DashboardLayout />}
           >
                  <Route path="services" element={<Home />} />

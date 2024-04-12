@@ -53,7 +53,7 @@ const RegisterPatient = () => {
   const navigate = useNavigate();
   const changeUserType = () => {
     setUserType("provider");
-    navigate("/register-provider");
+    navigate("/Med--Sal/register-provider");
   };
 
   //show password
@@ -80,7 +80,7 @@ const RegisterPatient = () => {
           <Typography component="h4">
             {t("register.loginQuest")}
             <Link
-              to="/login"
+              to="/Med--Sal/login"
               className="ms-1 text-success hover:text-secondary border-b-solid border-b-success hover:border-secondary border-b-[1px] cursor-pointer"
             >
               {t("register.loginLink")}

@@ -10,10 +10,10 @@ import Container from "../../utilities/Container";
 const NavBar = () => {
   const { t } = useTranslation("global");
   const links = [
-    { name: t("navbar.links.0"), to: "/" },
-    { name: t("navbar.links.1"), to: "/services" },
-    { name: t("navbar.links.2"), to: "/about-us" },
-    { name: t("navbar.links.3"), to: "/contact-us" },
+    { name: t("navbar.links.0"), to: "/Med--Sal" },
+    { name: t("navbar.links.1"), to: "/Med--Sal/services" },
+    { name: t("navbar.links.2"), to: "/Med--Sal/about-us" },
+    { name: t("navbar.links.3"), to: "/Med--Sal/contact-us" },
   ];
   const [openList, setOpenList] = useState(false);
   return (
@@ -35,7 +35,7 @@ const NavBar = () => {
               <MultiLangDropdown />
             </li>
             <li>
-              <Link to="/login">
+              <Link to="/Med--Sal/login">
                 <Button>{t("navbar.links.4")}</Button>
               </Link>
             </li>

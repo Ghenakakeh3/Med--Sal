@@ -26,7 +26,8 @@ const SideBardashbord = () => {
   const [Menus, setMenus] = useState([]);
   const [subMenuType, setSubMenuType] = useState("");
   const [menueClicked, setMenueClicked] = useState("");
-  const Role = useLocation().pathname.split("/")[1];
+  const Role = useLocation().pathname.split("/")[2];
+  console.log(Role) 
   useEffect(() => {
     if (Role === "dashboard") {
       setMenus(Menus_Admin_dashboard);
@@ -41,7 +42,7 @@ const SideBardashbord = () => {
       Data: [
         {
           title: t("sideBar_Dashbord.AdminDashboard_about_users_menu.0"),
-          src: "/dashboard/users",
+          src: "/Med--Sal/dashboard/users",
           icon: <Person_sidebar menue={menueClicked} />,
           subMenus: [
             {
@@ -62,7 +63,7 @@ const SideBardashbord = () => {
 
         {
           title: t("sideBar_Dashbord.AdminDashboard_about_users_menu.1"),
-          src: "/dashboard/services",
+          src: "/Med--Sal/dashboard/services",
           icon: <Services stoke="white" menue={menueClicked} />,
 
           subMenus: [
@@ -91,18 +92,18 @@ const SideBardashbord = () => {
         },
         {
           title: t("sideBar_Dashbord.AdminDashboard_about_users_menu.2"),
-          src: "/dashboard/requests",
+          src: "/Med--Sal/dashboard/requests",
           icon: <Person_pluse stoke="white" menue={menueClicked} />,
         },
         {
           title: t("sideBar_Dashbord.AdminDashboard_about_users_menu.3"),
-          src: "/dashboard/report",
+          src: "/Med--Sal/dashboard/report",
           gap: true,
           icon: <Graph stoke="white" menue={menueClicked} />,
         },
         {
           title: t("sideBar_Dashbord.AdminDashboard_about_users_menu.4"),
-          src: "/dashboard/products",
+          src: "/Med--Sal/dashboard/products",
           icon: <Notification stoke="white" menue={menueClicked} />,
         },
       ],
@@ -112,13 +113,13 @@ const SideBardashbord = () => {
       Data: [
         {
           title: t("sideBar_Dashbord.about_dashboard_menu.0"),
-          src: "/dashboard/settings",
+          src: "/Med--Sal/dashboard/settings",
           icon: <Settings stoke="white" menue={menueClicked} />,
         },
 
         {
           title: t("sideBar_Dashbord.about_dashboard_menu.1"),
-          src: "/dashboard/signOut",
+          src: "/Med--Sal/dashboard/signOut",
           icon: <Log_Out stoke="white" menue={menueClicked} />,
         },
       ],
@@ -130,7 +131,7 @@ const SideBardashbord = () => {
       Data: [
         {
           title: t("sideBar_Dashbord.serviceProvider_about_users_menu.0"),
-          src: "/dashboard_service_provider/appointment",
+          src: "/Med--Sal/dashboard_service_provider/appointment",
           icon: <Person_sidebar stoke="white" menue={menueClicked} />,
           subMenus: [
             {
@@ -147,7 +148,7 @@ const SideBardashbord = () => {
 
         {
           title: t("sideBar_Dashbord.serviceProvider_about_users_menu.1"),
-          src: "/dashboard_service_provider/services",
+          src: "/Med--Sal/dashboard_service_provider/services",
           icon: <Services stoke="white" menue={menueClicked} />,
 
           subMenus: [
@@ -168,7 +169,7 @@ const SideBardashbord = () => {
         },
         {
           title: t("sideBar_Dashbord.serviceProvider_about_users_menu.2"),
-          src: "/dashboard_service_provider/Products",
+          src: "/Med--Sal/dashboard_service_provider/Products",
           icon: <Notification stoke="white" menue={menueClicked} />,
           subMenus: [
             {
@@ -183,7 +184,7 @@ const SideBardashbord = () => {
         },
         {
           title: t("sideBar_Dashbord.serviceProvider_about_users_menu.3"),
-          src: "/dashboard_service_provider/report",
+          src: "/Med--Sal/dashboard_service_provider/report",
           gap: true,
           icon: <Graph stoke="white" menue={menueClicked} />,
         },
@@ -194,13 +195,13 @@ const SideBardashbord = () => {
       Data: [
         {
           title: t("sideBar_Dashbord.about_dashboard_menu.0"),
-          src: "/dashboard_service_provider/settings",
+          src: "/Med--Sal/dashboard_service_provider/settings",
           icon: <Settings stoke="white" menue={menueClicked} />,
         },
 
         {
           title: t("sideBar_Dashbord.about_dashboard_menu.1"),
-          src: "/dashboard_service_provider/signOut",
+          src: "/Med--Sal/dashboard_service_provider/signOut",
           icon: <Log_Out stoke="white" menue={menueClicked} />,
         },
       ],
@@ -230,20 +231,26 @@ const SideBardashbord = () => {
         <p className="text-white hidden lg:block">
           {t("sideBar_Dashbord.main_title.0")}
         </p>
+        
       </div>
 
       {Menus.map((Menu, index) => {
         // Menue has main title and Data
         return (
           <div className=" w-full  " key={index}>
+            
             <p className="text-[16px] font-normal text-myGray-500 mb-3 hidden lg:block">
               {Menu.main_title}
+            
             </p>
+            
             <span className="w-6 h-5 inline-block border-b-2 border-myGray-100 lg:hidden "></span>
             <ul className="   w-full ">
+              
               {/* data has title src and sub menus */}
               {Menu.Data.map((data, index) => (
                 <>
+                
                   <li
                     key={index}
                     className={`${
@@ -271,6 +278,7 @@ const SideBardashbord = () => {
                       >
                         {data.title}
                       </span>
+                    
                       {data.subMenus && (
                         <div
                           onClick={(e) => {
